@@ -19,12 +19,10 @@ export class RoutesService {
 
 export interface Route {
   id: number;
-  locations?: Location[];
+  locations?: {
+    altitude: number;
+    latitude: number;
+    longitude: number;
+  }[];
   name: string;
-}
-
-export interface Location {
-  altitude: number;
-  latitude: number;
-  longitude: number;
 }
