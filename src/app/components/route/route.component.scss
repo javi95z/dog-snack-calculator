@@ -1,0 +1,14 @@
+$icon-size: 80px;
+mat-card {
+  mat-card-header mat-icon {
+    display: block;
+    height: $icon-size;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: $icon-size;
+    width: 100%;
+  }
+  agm-map {
+    height: 300px;
+  }
+}

@@ -1,0 +1,17 @@
+<div appContainer fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="center start" fxLayoutGap="20px">
+  <mat-spinner *ngIf="!routes"></mat-spinner>
+  <div fxFlex fxFlexFill *ngFor="let item of routes">
+    <mat-card class="mat-elevation-z5">
+      <mat-card-header>
+        <mat-icon>directions</mat-icon>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+        <mat-card-subtitle>Route</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-actions>
+        <button mat-button [routerLink]="[ '/route', item.id ]">
+          <mat-icon>pets</mat-icon> Go
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

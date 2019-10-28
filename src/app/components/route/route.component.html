@@ -1,0 +1,36 @@
+<div appContainer fxLayout="column" fxLayoutAlign="start center" fxLayoutGap="20px">
+  <button mat-button [routerLink]="[ '/home' ]">
+    <mat-icon>keyboard_arrow_left</mat-icon>
+    <span>Back to list</span>
+  </button>
+  <mat-spinner *ngIf="!route"></mat-spinner>
+  <div *ngIf="route" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="start start" fxLayoutGap="20px" fxFlexFill>
+    <!-- Route map -->
+    <mat-card class="mat-elevation-z5" fxFlex fxFlexFill>
+      <mat-card-header>
+        <mat-card-title>{{ route.name }}</mat-card-title>
+        <mat-card-subtitle>Route</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <agm-map [fitBounds]="true">
+          <agm-marker *ngFor="let item of route.locations" [latitude]="item.latitude" [longitude]="item.longitude"
+            [agmFitBounds]="true">
+          </agm-marker>
+        </agm-map>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- Snacks information -->
+    <mat-card class="mat-elevation-z5" fxLayout="column" fxLayoutAlign="center center">
+      <mat-card-header>
+        <mat-card-title>
+          <mat-icon>pets</mat-icon>
+          Feeding Newton
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Newton needs <strong>{{ snacks || 'no' }} snacks</strong> to complete this route</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

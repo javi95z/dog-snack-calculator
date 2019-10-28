@@ -1,0 +1,14 @@
+:host {
+  bottom: 0;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  p {
+    font-size: 12px;
+    a {
+      color: inherit;
+      font-weight: 500;
+      text-decoration: none;
+    }
+  }
+}
