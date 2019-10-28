@@ -1,5 +1,8 @@
 $icon-size: 80px;
 mat-card {
+  mat-card-content {
+    text-align: center;
+  }
   mat-card-header mat-icon {
     display: block;
     height: $icon-size;

@@ -1,4 +1,4 @@
-import {Directive, ElementRef} from '@angular/core';
+import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appContainer]'
@@ -6,6 +6,7 @@ import {Directive, ElementRef} from '@angular/core';
 export class ContainerDirective {
   constructor(el: ElementRef) {
     el.nativeElement.style.paddingTop = '50px';
+    el.nativeElement.style.marginBottom = '100px';
     el.nativeElement.style.marginLeft = '10%';
     el.nativeElement.style.marginRight = '10%';
   }
